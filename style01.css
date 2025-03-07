@@ -1,5 +1,6 @@
 body {
-  
+        background-image: url("backgroundimage1.jpeg");
+        background-size: cover;
         font-family: "Montserrat", serif;
         font-optical-sizing: auto;
         font-weight: weight;
@@ -10,8 +11,7 @@ body {
   } 
 
 .main{
-  background-image: url("backgroundimage1.jpeg");
-  background-size: cover;
+ 
   display:flex;
   height:100vh; /*vh= view prot "height according to screen" */
   padding: 0.5rem;
@@ -87,7 +87,7 @@ a{
     background-color:rgba(255, 255, 255, 0.04);
     box-shadow:0 0 10px rgba(255, 255, 255, 0.3);
     border-radius: 1rem;
-    height: 100%;
+    height: 100vh;
     margin-top: 0.5rem;
     padding: 0.5rem 0.75rem;
 }
@@ -153,7 +153,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem 0 1rem 0;
+    margin: 0 0 1rem 0;
     z-index: 10; /* to give priority (z-index is directly proportinal) */
 }
 .sticky-nav-icon {
@@ -199,9 +199,9 @@ a{
     font-size: 0.85rem;
     opacity: 0.8;
 }
-.main-raho-img {
+/* .main-raho-img {
     height: 9.3rem;
-}
+} */
 
 .footer {
     height: 300px;
@@ -218,7 +218,7 @@ a{
 
 .music_player {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center; 
 }
 
@@ -277,8 +277,8 @@ a{
 }
 
 .album-item img {
-    height: 80%;
-    width: 20%;
+    height:80% ;
+    width:20% ;
     margin-left: 0.5rem;
     margin-top: 0.5rem;
     border-radius: 1rem;
@@ -332,4 +332,103 @@ a{
     height: 1.4rem;
     margin-right: 1rem;
     opacity: 0.7;
+}
+
+@media (max-width:860px) {
+    .side_bar {
+        width: 239px;
+    }
+    .third-part {
+        display: none;
+    }
+    .player-control{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box2{
+        background-color: #232323;
+        box-shadow:0 0 5px rgba(255, 255, 255, 0.3);
+        height: 10rem;
+        border-radius: 0.75rem;
+        margin: 0.75rem 0 0.75rem 0;
+        padding: 0.75rem 1.75rem;
+        
+    }
+    .album-item img {
+        height:90% ;
+        width:30% ;
+        margin-left: 0.5rem;
+        margin-top: 0.5rem;
+        border-radius: 1rem;
+    }
+}
+@media (max-width:750px) {
+    .side_bar {
+        display: none;
+    }
+    .album-item img {
+        height:115% ;
+        width:50% ;
+        margin-left: 0.5rem;
+        margin-top: 0.5rem;
+        border-radius: 1rem;
+    }
+}
+@media (max-width:420px) {
+    .album-item img {
+        height:160% ;
+        width:60% ;
+        margin-left: -1.1rem;
+        margin-top: 0.5rem;
+        border-radius: 1rem;
+        padding-bottom: 10px;
+    }
+    .player-control-icon {
+        height: 1.2rem;
+        margin-right: 1.15rem;
+        opacity: 0.7;
+    }
+    
+}
+@media (max-width:512px) {
+    .card {
+        background-color: #232323;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+        width: 60px;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin-left: 1.5rem;
+        margin-top: 1rem;
+    }
+    .card-info{
+        display: none;
+    }
+    .card-title {
+        font-weight: 500;
+        font-size: 10px;
+    }
+}
+@media (max-width:400px) {
+    .card {
+        background-color: #232323;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+        width: 50px;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin-left: 1.5rem;
+        margin-top: 1rem;
+    }
+    .card img {
+        width: 140%;
+        padding: 0 0px 0px 0px;
+        margin: -10px 0px 0px -10px;
+        border-radius: 0.5rem;
+    }
+    .playback-bar {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 0px 0 -26px;
+    }
 }
